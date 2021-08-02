@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow: hidden;
+  background-color: #333;
+}
+/* .section-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+} */
+.menu {
+  display: none;
+}
+.section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  transition: all 1.5s;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-btn {
+  position: fixed;
+  top: 50%;
+  z-index: 1100;
+  color: #d50000;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.right-btn {
+  right: 1rem;
+}
+.left-btn {
+  left: 1rem;
+}
+.fa-arrow-circle-left,
+.fa-arrow-circle-right {
+  font-size: 3rem;
+}
+/* page Controller */
+.progress-wrapper {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1100;
+}
+.progress {
+  text-align: center;
+  margin: 2rem 0;
+}
+.progress h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+.circle-wrapper {
+  display: flex;
+}
+.circle {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  margin: 0.3rem;
+  transition: background-color 0.3s;
+}
+/* navbar */
+.navbar {
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  justify-content: space-evenly;
+  top: 1rem;
+}
+.logo-img {
+  width: 3rem;
+}
+.navlist {
+  display: flex;
+  justify-content: center;
+}
+.navlink {
+  font-size: 1.4rem;
+  color: #fff;
+  width: 16rem;
+  margin: 0rem 3rem;
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0.1rem solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+.navlink::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  background-color: #d50000;
+  transform: rotate(-37deg);
+  transform-origin: left bottom;
+  left: -30%;
+  top: 1rem;
+  transition: all 0.5s;
+}
+.navlink:hover::before {
+  left: 90%;
+}
+/* section 1 */
+.section-1 {
+  z-index: 50;
+}
+.section-wrapper {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+
+  transform: scale(1.5);
+  transition: all 1.5s;
+}
+.section-1-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(./images/section-1-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.section-1-heading-wrapper {
+  width: 60%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-1-heading {
+  color: #fff;
+  font-size: 8rem;
+  text-transform: capitalize;
+  text-align: right;
+  user-select: none;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  border-bottom: 0.5rem solid #d50000;
+}
+/* SECTION 2 */
+.section-2 {
+  z-index: 40;
+}
+.section-2-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(./images/section-2-bg.jpg) center no-repeat;
+  background-size: cover;
+  justify-content: space-evenly;
+}
+.sale {
+  flex-direction: column;
+}
+.sale-bag {
+  width: 37rem;
+  opacity: 0.9;
+}
+.wine-bottle {
+  width: 40rem;
+  opacity: 0.9;
+}
+.sale-button {
+  width: 20rem;
+  height: 4.5rem;
+  border: 0.2rem solid #fff;
+  color: #fff;
+  font-size: 2.5rem;
+  background: transparent;
+  text-transform: uppercase;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  margin-top: 4rem;
+}
+.sale-button:hover {
+  background-color: #d50000;
+}
+/* SECTION 3 */
+.section-3 {
+  z-index: 30;
+}
+.section-3-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+    url(./images/section-3-bg.jpg) center no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+.section-3-heading {
+  font-size: 15rem;
+  text-align: center;
+  font-size: 12rem;
+  position: absolute;
+  text-transform: uppercase;
+  transform: rotate(-15deg);
+  color: #fff;
+  text-shadow: 0 1rem 2rem #000;
+  z-index: 2;
+  user-select: none;
+}
+.frame-img {
+  width: 80rem;
+  opacity: 0.7;
+  position: absolute;
+}
+.grapes-img {
+  width: 40rem;
+  z-index: 1;
+  transition: all 2s;
+  opacity: 0.8;
+}
+.grapes-img:hover {
+  z-index: 2;
+  transform: scale(1.5);
+  opacity: 1;
+}
+.grapes-img:hover .section-3-wrapper {
+  opacity: 0.3;
+}
+/* SECTION 4 */
+.section-4 {
+  z-index: 20;
+}
+.section-4-wrapper {
+  flex-direction: column;
+}
+.section-4-bg {
+  width: 110vw;
+  height: 110vh;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(./images/section-4-bg.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(1rem);
+}
+.section-4-heading {
+  font-size: 8rem;
+  color: #d50000;
+  font-weight: 300;
+}
+.section-4-wines {
+  width: 50rem;
+  border: 0.1rem solid #fff;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+/* SECTION 5 */
+.section-5 {
+  z-index: 10;
+}
+.section-5-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(./images/section-5-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.footer-img {
+  width: 40rem;
+  margin: 0 15rem;
+}
+.footer-list li {
+  font-size: 1.8rem;
+  color: #ddd;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 0.1rem;
+}
+.footer-list li:nth-child(1) {
+  text-transform: uppercase;
+  color: #fff;
+}
+.copyright {
+  position: absolute;
+  bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+.copyright a {
+  color: #ccc;
+  border-bottom: 0.1rem solid #fff;
+  transition: letter-spacing 0.3s;
+}
+.copyright a:hover {
+  letter-spacing: 0.2rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .navlink {
+    width: 12rem;
+  }
+  .navlink::before {
+    left: -40%;
+  }
+  .section-1-heading {
+    font-size: 6rem;
+  }
+  .sale-bag {
+    width: 27rem;
+  }
+  .section-3-heading {
+    font-size: 9rem;
+    transform: rotate(-30deg);
+  }
+  .sale-button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+  .wine-bottle {
+    width: 45rem;
+  }
+  .footer-img {
+    margin: 0 8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    z-index: 2000;
+    justify-content: start;
+  }
+  .logo-img {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    right: 6rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1000;
+  }
+  .line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: #d50000;
+    margin: 1rem 0;
+    transition: all 0.5s;
+  }
+  .change .line-1 {
+    transform: rotate(40deg) translate(0.5rem, 1.2rem);
+  }
+  .change .line-2 {
+    transform: translate(-0.3rem, 2rem);
+  }
+  .change .line-3 {
+    transform: rotate(-40deg) translate(0.7rem, -1.2rem);
+  }
+  .navlist {
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: -21rem;
+    background-color: #333;
+    height: calc(100vh - 5rem);
+    width: 21rem;
+
+    justify-content: start;
+    align-items: center;
+    border-radius: 3rem 0 0 0;
+    transition: right 0.5s 0.2s;
+  }
+  .change .navlist {
+    right: 0;
+  }
+  .navlink {
+    margin: 2rem 0;
+  }
+  .section-2-wrapper {
+    flex-direction: column;
+  }
+  .sale {
+    order: 1;
+  }
+  .sale-bag {
+    width: 22rem;
+  }
+  .grapes-img {
+    width: 30rem;
+  }
+  .section-4-heading {
+    font-size: 8rem;
+  }
+  .section-5-wrapper {
+    flex-direction: column;
+  }
+  .footer-img {
+    width: 30rem;
+    order: 1;
+  }
+  .footer-list {
+    width: 20rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .fa-arrow-circle-left,
+  .fa-arrow-circle-right {
+    font-size: 5rem;
+  }
+  .section-1-heading {
+    font-size: 4rem;
+  }
+  .sale-bag {
+    width: 20rem;
+  }
+  .wine-bottle {
+    width: 30rem;
+  }
+  .section-3-heading {
+    font-size: 6rem;
+  }
+  .frame-img {
+    width: 60rem;
+  }
+  .grapes-img {
+    width: 25rem;
+  }
+  .section-4-heading {
+    font-size: 6rem;
+    text-align: center;
+  }
+  .progress-wrapper {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .circle {
+    width: 1rem;
+    height: 1rem;
+  }
+  .sale-bag {
+    width: 15rem;
+  }
+  .section-3-heading {
+    font-size: 5rem;
+  }
+  .frame-img {
+    width: 50rem;
+  }
+  .section-4-heading {
+    font-size: 5rem;
+  }
+  .section-4-wines {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+  .right-btn {
+    right: 0.5rem;
+  }
+  .left-btn {
+    left: 0.5rem;
+  }
+  .navlist {
+    top: 8rem;
+    right: -30rem;
+
+    width: 30rem;
+  }
+  .navlink {
+    width: 18rem;
+    font-size: 2rem;
+  }
+  .navlink::before {
+    left: -20%;
+  }
+  .grapes-img {
+    width: 30rem;
+  }
+  .grapes-img:hover {
+    transform: scale(1);
+  }
+}
+
+@media (max-height: 500px) {
+  .section-2-wrapper {
+    flex-direction: row;
+  }
+  .section-5-wrapper {
+    flex-direction: row;
+  }
+  .footer-img {
+    order: -1;
+    margin: 0 0 0 5rem;
+    width: 20rem;
+  }
+  .section-3-heading {
+    font-size: 7rem;
+  }
+  .section-4-wines {
+    width: 25rem;
+  }
+  .section-4-heading {
+    font-size: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-height: 300px) {
+  .progress-wrapper {
+    left: 20%;
+  }
+  .circle {
+    width: 1rem;
+    height: 1rem;
+  }
+  .navlist {
+    top: 8rem;
+    right: -100vw;
+    width: 100vw;
+    flex-direction: row;
+  }
+  .navlink {
+    font-size: 2rem;
+    font-size: 1.2rem;
+    width: 10rem;
+    margin: 1rem;
+  }
+  .navlink::before {
+    left: -55%;
+  }
+}
